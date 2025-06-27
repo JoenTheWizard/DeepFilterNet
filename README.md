@@ -131,6 +131,22 @@ maturin develop --release -m pyDF-data/Cargo.toml
 maturin develop --release --features hdf5-static -m pyDF-data/Cargo.toml
 ```
 
+### Build libDF C ABI
+
+Build instructions
+
+1. Install cargo-c
+
+```sh
+cargo install cargo -c
+```
+
+2. Build libDF
+
+```sh
+cargo cinstall --release --destdir /tmp/staging-df -p deep_filter
+```
+
 ### Use DeepFilterNet from command line
 
 To enhance noisy audio files using DeepFilterNet run
